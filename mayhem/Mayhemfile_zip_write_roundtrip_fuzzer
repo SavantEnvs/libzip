@@ -1,0 +1,6 @@
+project: savantenvs/libzip
+target: zip_write_roundtrip_fuzzer
+cmds:
+  - cmd: /mayhem/zip_write_roundtrip_fuzzer
+    libfuzzer: true
+    timeout: 5

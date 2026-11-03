@@ -1,0 +1,10 @@
+project: savantenvs/libzip
+target: zip_read_metadata_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/zip_read_metadata_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/zip_read_metadata_fuzzer
+    libfuzzer: true
+    timeout: 5
+    dictionary: /mayhem/mayhem/zip_read_metadata_fuzzer/zip_read_metadata_fuzzer.dict

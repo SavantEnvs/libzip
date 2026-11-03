@@ -1,0 +1,10 @@
+project: savantenvs/libzip
+target: zip_write_encrypt_pkware_file_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/zip_write_encrypt_pkware_file_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/zip_write_encrypt_pkware_file_fuzzer
+    libfuzzer: true
+    timeout: 5
+
